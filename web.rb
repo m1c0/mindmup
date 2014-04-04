@@ -9,6 +9,9 @@ require File.dirname(__FILE__)+'/lib/browser_detection.rb'
 require File.dirname(__FILE__)+'/lib/github_routes.rb'
 require File.dirname(__FILE__)+'/lib/dropbox_routes.rb'
 require 'net/http'
+require 'dotenv'
+
+Dotenv.load
 
 
 def cache_last_news
@@ -22,7 +25,8 @@ end
 configure do
   static_ts = '20140326144951'
   public_host = ENV['PUBLIC_HOST'] || 'http://static.mindmup.net'
-  set :static_host, "#{public_host}/#{static_ts}"
+  #set :static_host, "#{public_host}/#{static_ts}"
+  set :static_host, "/js"
   set :static_image_host, "#{public_host}/img"
   set :google_analytics_account, ENV["GOOGLE_ANALYTICS_ACCOUNT"]
   set :s3_website,ENV['S3_WEBSITE']
@@ -55,7 +59,7 @@ configure do
   set :gold_pdf_max_size, ENV['GOLD_PDF_MAX_SIZE'] || 100*1024*1024
   if production? then
     require File.dirname(__FILE__) +'/compiled_ts.rb'
-    set :public_url, "#{public_host}/compiled/#{settings.compiled_ts}"
+    set :public_url, "/js"
   else
     set :public_url, ''
   end
