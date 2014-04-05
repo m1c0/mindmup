@@ -1,7 +1,7 @@
 <div data-mm-role="share" class="modal hide fade" id="modalShareEmail">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3>Share map by e-mail</h3>
+		<h3>Поделиться по e-mail</h3>
 	</div>
 	<div class="modal-body">
 		<form class="form-horizontal" action="http://submit.jotformpro.com/submit/<%=ENV['JOTFORM_SHARE']%>/" method="post" name="form_<%=ENV['JOTFORM_SHARE']%>" id="<%=ENV['JOTFORM_SHARE']%>" accept-charset="utf-8" novalidate="true" target="jotForm">
@@ -9,19 +9,19 @@
 			<input type="hidden" name="q4_path" />
 			<input type="hidden" name="q7_title"/>
 			<div class="control-group">
-				<label class="control-label" for="shareEmail" >Recipient email</label>
+				<label class="control-label" for="shareEmail" >E-mail получателя</label>
 				<div class="controls">
 					<input type="text" id="shareEmail" name="q3_recipientEmail" placeholder="Recipient e-mail" />
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label" for="shareName">Your Name</label>
+				<label class="control-label" for="shareName">Ваше имя</label>
 				<div class="controls">
 					<input type="text" name="q6_yourName" id="shareName" placeholder="Name" />
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label" for="shareMessage">Message to the recipient</label>
+				<label class="control-label" for="shareMessage">Текст сообщения</label>
 				<div class="controls">
 					<textarea rows="5" name="q5_message" id="shareMessage"></textarea>
 				</div>
@@ -29,7 +29,7 @@
 		</form>
 	</div>
 	<div class="modal-footer">
-		<a href="#" data-mm-role='submit' class="btn btn-primary" data-category="Map" data-event-type="Share Email Send">Send</a>
-		<a href="#" class="btn" data-dismiss="modal">Cancel</a>
+		<a href="#" data-mm-role='submit' class="btn btn-primary" data-category="Map" data-event-type="Share Email Send">Отправить</a>
+		<a href="#" class="btn" data-dismiss="modal">Отмена</a>
 	</div>
 </div>

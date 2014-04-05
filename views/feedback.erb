@@ -1,8 +1,8 @@
 <div id="modalFeedback" class="modal hide fade">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Ask a question or send feedback</h3>
-    <p>Or, alternatively, just send us an e-mail at <a href="mailto:contact@mindmup.com" target="_blank">contact@mindmup.com</a>.</p>
+    <h3>Задай вопрос или оставь отзыв!</h3>
+    <p>Или, просто отправь е-мей на <a href="mailto:mindmup.ru@gmail.com" target="_blank">mindmup.ru@gmail.com</a>.</p>
   </div>
   <div class="modal-body">
     <form class="form-horizontal" action="http://submit.jotformpro.com/submit/<%=ENV['JOTFORM_CONTACT']%>/" method="post" name="form_<%=ENV['JOTFORM_CONTACT']%>" id="<%=ENV['JOTFORM_CONTACT']%>" accept-charset="utf-8" novalidate="true" target="jotForm">
@@ -14,13 +14,13 @@
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="inputName">Name</label>
+        <label class="control-label" for="inputName">Имя</label>
         <div class="controls">
           <input type="text" id="inputName" name="q1_name" placeholder="Name" />
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="inputFeedback">Feedback</label>
+        <label class="control-label" for="inputFeedback">Отзыв</label>
         <div class="controls">
           <textarea id="inputFeedback" rows="5" name="q4_askUs"></textarea>
         </div>
@@ -28,8 +28,8 @@
     </form>
   </div>
   <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
-    <a href="#" class="btn btn-primary sendFeedback" data-category="Feedback" data-event-type="Send">Send Feedback</a>
+    <a href="#" class="btn" data-dismiss="modal">Отмена</a>
+    <a href="#" class="btn btn-primary sendFeedback" data-category="Feedback" data-event-type="Send">Отправить</a>
   </div>
 </div>
 <iframe id="jotForm" name="jotForm" style="display:none;visibility:hidden"></iframe>
