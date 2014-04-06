@@ -367,7 +367,7 @@ MM.GitHub.GithubFileSystem = function (api, prompters) {
 			saveWhenAuthorised = function () {
 				var path = toGithubComponentPath(mapId);
 				if (!path.path) {
-					prompters.fileName('Save to Github', true, fileName).then(
+					prompters.fileName('Сохранить to Github', true, fileName).then(
 						function (newMapId) {
 							self.saveMap(contentToSave, newMapId, fileName, showAuthenticationDialogs)
 								.then(deferred.resolve, deferred.reject, deferred.notify);

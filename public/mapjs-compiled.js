@@ -1703,7 +1703,7 @@ MAPJS.MapModel = function (layoutCalculator, selectAllTitles, clipboardProvider)
 			return false;
 		}
 		var title = currentlySelectedIdea().title;
-		if (_.include(selectAllTitles, title)) { // === 'Press Space or double-click to edit') {
+		if (_.include(selectAllTitles, title)) { // === 'Для редактирования кликни дважды или нажми пробел') {
 			shouldSelectAll = true;
 		}
 		self.dispatchEvent('nodeEditRequested', currentlySelectedIdeaId, shouldSelectAll, !!editingNew);

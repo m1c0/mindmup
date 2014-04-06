@@ -8,7 +8,7 @@ jQuery.fn.saveWidget = function (mapController) {
 		saveButton = element.find('button[data-mm-role=publish]'),
 		resetSaveButton = function () {
 			if (saveButton.attr('disabled')) {
-				saveButton.text('Save').addClass('btn-primary').removeAttr('disabled');
+				saveButton.text('Сохранить').addClass('btn-primary').removeAttr('disabled');
 				element.find('.dropdown-toggle').removeAttr('disabled');
 			}
 		},
@@ -30,7 +30,7 @@ jQuery.fn.saveWidget = function (mapController) {
 		};
 	$(window).keydown(function (evt) {
 		if (evt.which === 83 && (evt.metaKey || evt.ctrlKey && (!evt.altKey))) {
-			if (!autoSave && mapChanged) {
+			if (!autoSave && mapChanged){
 				mapController.publishMap(repository);
 			}
 			evt.preventDefault();
@@ -55,7 +55,7 @@ jQuery.fn.saveWidget = function (mapController) {
 	mapController.addEventListener('mapLoaded mapSaved', function (mapId, idea, properties) {
 		setDefaultRepo(mapId);
 		mapChanged = false;
-		saveButton.text('Save').attr('disabled', true).removeClass('btn-primary');
+		saveButton.text('Сохранить').attr('disabled', true).removeClass('btn-primary');
 		element.find('.dropdown-toggle').removeAttr('disabled');
 		autoSave = properties.autoSave;
 		if (!autoSave) {
